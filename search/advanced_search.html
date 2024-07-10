@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Advanced Search</title>
+    <style>
+        /* Style pour centrer et formater la page */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+        /* Style pour le conteneur de recherche */
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* Style pour le logo Google */
+        .google-logo {
+            width: 272px;
+            height: 92px;
+            background-image: url('https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png');
+            background-size: cover;
+        }
+        /* Style pour les champs de recherche */
+        .search-box {
+            display: flex;
+            flex-direction: column;
+            width: 584px;
+            border: 1px solid #dfe1e5;
+            box-shadow: none;
+            border-radius: 24px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .search-box input[type="text"] {
+            height: 34px;
+            border: 1px solid #dfe1e5;
+            outline: none;
+            font-size: 16px;
+            margin: 5px 0;
+            padding: 0 10px;
+            border-radius: 4px;
+            background-color: #ffffff;
+        }
+        /* Style pour le bouton de recherche */
+        .buttons {
+            margin-top: 18px;
+        }
+        .buttons input {
+            background-color: #4285F4;
+            border: 1px solid #4285F4;
+            border-radius: 4px;
+            color: white;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            cursor: pointer;
+        }
+        .buttons input:hover {
+            background-color: #357AE8;
+        }
+        /* Style pour la navigation */
+        nav {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #4285F4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation vers les autres pages -->
+    <nav>
+        <a href="index.html">Google Search</a>
+        <a href="image_search.html">Image Search</a>
+    </nav>
+    <!-- Logo Google -->
+    <div class="google-logo"></div>
+    <div class="search-container">
+        <!-- Formulaire pour la recherche avancée de Google -->
+        <form action="https://www.google.com/search" method="get">
+            <div class="search-box">
+                <label>
+                    Find pages with...<br>
+                    <input type="text" name="as_q" placeholder="all these words">
+                </label><br>
+                <label>
+                    Find pages with...<br>
+                    <input type="text" name="as_epq" placeholder="this exact word or phrase">
+                </label><br>
+                <label>
+                    Find pages with...<br>
+                    <input type="text" name="as_oq" placeholder="any of these words">
+                </label><br>
+                <label>
+                    Find pages with...<br>
+                    <input type="text" name="as_eq" placeholder="none of these words">
+                </label>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Advanced Search">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

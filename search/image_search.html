@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Image Search</title>
+    <style>
+        /* Style pour centrer et formater la page */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+        /* Style pour le conteneur de recherche */
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* Style pour le logo Google */
+        .google-logo {
+            width: 272px;
+            height: 92px;
+            background-image: url('https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png');
+            background-size: cover;
+        }
+        /* Style pour le champ de recherche */
+        .search-box {
+            display: flex;
+            align-items: center;
+            height: 44px;
+            width: 584px;
+            border: 1px solid #dfe1e5;
+            box-shadow: none;
+            border-radius: 24px;
+            margin: 0 auto;
+            padding: 0 14px;
+            background-color: #ffffff;
+        }
+        .search-box input[type="text"] {
+            flex: 1;
+            height: 34px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background-color: #ffffff;
+        }
+        /* Style pour les boutons de recherche */
+        .buttons {
+            margin-top: 18px;
+        }
+        .buttons input {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #5f6368;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            cursor: pointer;
+        }
+        .buttons input:hover {
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            border: 1px solid #dadce0;
+            color: #222;
+        }
+        /* Style pour la navigation */
+        nav {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #4285F4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation vers les autres pages -->
+    <nav>
+        <a href="index.html">Google Search</a>
+        <a href="advanced_search.html">Advanced Search</a>
+    </nav>
+    <!-- Logo Google -->
+    <div class="google-logo"></div>
+    <div class="search-container">
+        <!-- Formulaire pour la recherche d'images Google -->
+        <form action="https://www.google.com/search" method="get">
+            <div class="search-box">
+                <input type="hidden" name="tbm" value="isch">
+                <input type="text" name="q" placeholder="Search Images...">
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Image Search">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
